@@ -20,12 +20,12 @@ description: >
 # root of your server.
 
 #개발
-# baseurl: ""  # the subpath of your site, e.g. /blog/
-# url:  ""  # the base hostname & protocol for your site
+ baseurl: ""  # the subpath of your site, e.g. /blog/
+ url:  ""  # the base hostname & protocol for your site
 
 # 배포
-baseurl: /gansaeldaejangBlog/ # the subpath of your site, e.g. /blog/
-url: https://favoritecoding.github.io/gansaeldaejangBlog/ # the base hostname & protocol for your site
+# baseurl: /gansaeldaejangBlog/ # the subpath of your site, e.g. /blog/
+# url: https://favoritecoding.github.io/gansaeldaejangBlog/ # the base hostname & protocol for your site
 
 
 cover: "/assets/header_image.jpg"
