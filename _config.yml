@@ -25,7 +25,7 @@ description: >
 
 # 배포
 baseurl: /gansaeldaejangBlog/ # the subpath of your site, e.g. /blog/
-url: https://favoritecoding.github.io/gansaeldaejangBlog/ # the base hostname & protocol for your site
+url: https://favoritecoding.github.io/ # the base hostname & protocol for your site
 
 
 cover: "/assets/header_image.jpg"
