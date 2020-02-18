@@ -1,5 +1,5 @@
 ---
 layout: category
 title: kancho
-permalink: '/kancho'
+permalink: /kancho/
 ---
