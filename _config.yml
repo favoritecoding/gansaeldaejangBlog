@@ -20,12 +20,12 @@ description: >
 # root of your server.
 
 #개발
-# baseurl: ""  # the subpath of your site, e.g. /blog/
-# url:  ""  # the base hostname & protocol for your site
+baseurl: ""  # the subpath of your site, e.g. /blog/
+url:  ""  # the base hostname & protocol for your site
 
 # 배포
-baseurl: /gansaeldaejangBlog/ # the subpath of your site, e.g. /blog/
-url: https://favoritecoding.github.io/ # the base hostname & protocol for your site
+# baseurl: /gansaeldaejangBlog/ # the subpath of your site, e.g. /blog/
+# url: https://favoritecoding.github.io/ # the base hostname & protocol for your site
 
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
@@ -40,7 +40,7 @@ highlightjs_theme: "monokai-sublime"
 pagination:
   enabled: true
   per_page: 5
-  permalink: "/page/:num/"
+  permalink: "/gansaeldaejangBlog/page/:num/"
   sort_reverse: true
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
@@ -67,6 +67,14 @@ descriptions:
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
 
+  - cat: pie
+    desc: "Posted by pie."
+
+  - cat: kancho
+    desc: "Posted by kancho."
+
+  - cat: chickenPop
+    desc: "Posted by chickenPop."
 # Social icons and sharing options
 #
 # Social settings are used in two places:
