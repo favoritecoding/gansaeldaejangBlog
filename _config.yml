@@ -24,7 +24,7 @@ description: >
 # url:  ""  # the base hostname & protocol for your site
 
 # 배포
-baseurl: /gansaeldaejangBlog/ # the subpath of your site, e.g. /blog/
+baseurl: "" # /gansaeldaejangBlog/"" # the subpath of your site, e.g. /blog/
 url: https://favoritecoding.github.io/ # the base hostname & protocol for your site
 
 cover: "/assets/header_image.jpg"
@@ -40,7 +40,7 @@ highlightjs_theme: "monokai-sublime"
 pagination:
   enabled: true
   per_page: 5
-  permalink: "/gansaeldaejangBlog/page/:num/"
+  permalink: "/page/:num/"
   sort_reverse: true
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
