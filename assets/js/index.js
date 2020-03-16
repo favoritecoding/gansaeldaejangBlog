@@ -1,5 +1,5 @@
 // turn img alt into caption
-$('.post-content > p > img[alt]').replaceWith(function () {
+$('img[alt]').replaceWith(function () {
     return '<figure>'
         + '<a href="' + $(this).attr('src') + '" class="mg-link">'
         + '<img src="' + $(this).attr('src') + '"/></a>'
