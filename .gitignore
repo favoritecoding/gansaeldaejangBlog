@@ -1,9 +1,9 @@
-.DS_Store
+#.DS_Store
 
 
 # Sass garbage
 #.sass-cache
 
 # Bundler
-.bundle/
-vendor/
+#.bundle/
+#vendor/
