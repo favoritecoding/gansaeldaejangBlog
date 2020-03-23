@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+
+  <head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>jekyll-3. jekyll 로컬 개발환경 셋팅</title>
+  <meta name="description" content="jekyll 로컬 개발환경 셋팅의 필요성  매번 수정된 코드를 확인 하기 위해 github에 git push를 하면 배포가 되기까지는 시간이 걸립니다. (빨리 반영될때도 있지만 그렇지 않은 경우도 있습니다.) 개인이 운영하는 블로그일 경우에는 git push하여 수정된 코드를 배포...">
+  
+  <meta name="author" content="Ben Centra">
+  <meta name="copyright" content="&copy; Ben Centra 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="jekyll 로컬 개발환경 셋팅의 필요성  매번 수정된 코드를 확인 하기 위해 github에 git push를 하면 배포가 되기까지는 시간이 걸립니다. (빨리 반영될때도 있지만 그렇지 않은 경우도 있습니다.) 개인이 운영하는 블로그일 경우에는 git push하여 수정된 코드를 배포..." />
+  <meta property="og:url" content="http://localhost:4000/kancho/2020/02/19/jekyll-3.html">
+  <meta property="og:site_name" content="Centrarium" />
+  <meta property="og:title" content="jekyll-3. jekyll 로컬 개발환경 셋팅" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://localhost:4000/assets/instacode.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="jekyll-3. jekyll 로컬 개발환경 셋팅">
+  <meta name="twitter:description" content="jekyll 로컬 개발환경 셋팅의 필요성  매번 수정된 코드를 확인 하기 위해 github에 git push를 하면 배포가 되기까지는 시간이 걸립니다. (빨리 반영될때도 있지만 그렇지 않은 경우도 있습니다.) 개인이 운영하는 블로그일 경우에는 git push하여 수정된 코드를 배포...">
+  <meta name="twitter:image" content="http://localhost:4000/assets/instacode.png">
+  <meta name="twitter:url" content="http://localhost:4000/kancho/2020/02/19/jekyll-3.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/kancho/2020/02/19/jekyll-3.html">
+	<link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Centrarium">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				<!-- 
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">posts</a>
+	
+
+	
+	<li class="nav-link"><a href="/typography/">Typography</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+ -->
+	<li class="nav-link"><a href="/about">About</a>
+	<li class="nav-link"><a href="/pie">Pie</a>
+	<li class="nav-link"><a href="/kancho">Kancho</a>
+	<li class="nav-link"><a href="/chickenPop">ChickenPop</a>
+	<li class="nav-link"><a href="/posts">All</a>
+	<li class="nav-link"><a href="/typography">Typography</a>
+
+      </ul>  
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/instacode.png);">
+  <div class="scrim has-cover">
+    <header class="post-header">
+      <h1 class="title">jekyll-3. jekyll 로컬 개발환경 셋팅</h1>
+      <p class="info">by <strong>kancho</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+  <div class="post-date">February 19, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/kancho">Kancho</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h2 id="jekyll-로컬-개발환경-셋팅의-필요성">jekyll 로컬 개발환경 셋팅의 필요성</h2>
+<ul>
+  <li>매번 수정된 코드를 확인 하기 위해 github에 git push를 하면 배포가 되기까지는 시간이 걸립니다. (빨리 반영될때도 있지만 그렇지 않은 경우도 있습니다.)
+ 개인이 운영하는 블로그일 경우에는 git push하여 수정된 코드를 배포하며 확인 할 수 있지만, 좋코는 팀블로그여서 그렇게 했다가는 충돌이 날겁니다.
+ 충돌을 방지하고 실시간으로 확인하기위해서 로컬 개발환경을 셋팅합니다. 팀원들은 각자의 PC에서 코드를 수정하고 확인하며, 완성된 코드를 git push 하기로했습니다.</li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="루비-설치">루비 설치</h2>
+
+<p>keyll를 사용하기 위해서는 루비가 필요합니다.
+루비를 설치하도록 하겠습니다. (window 64bit 운영체제 기준)</p>
+
+<p><a href="https://rubyinstaller.org/downloads/">루비 다운로드 링크</a> : https://rubyinstaller.org/downloads/</p>
+
+<p><br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-1.PNG" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p>다운로드된 파일을 실행시켜 설치를 합니다 (계속 Next를 누릅니다.)</p>
+
+<p>설치가 완료된 파일은 윈도우키를 눌러 확인 할 수 있습니다.</p>
+
+<p><br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-1-2.png" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p>Start Command Prompt with Ruby를 실행시키고 설치된 ruby의 버전을 확인해보겠습니다</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">ruby -v</code></pre></figure>
+
+<p><br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-2.PNG" alt="absolute" /></p>
+
+<h2 id="prompt를-utf-8로-인코딩">Prompt를 UTF-8로 인코딩</h2>
+
+<p>ruby가 제대로 설치 되었다면 Start Command Prompt with Ruby 창을 UTF-8로 인코딩 해주는 설정을 하겠습니다.
+(설정을 안할시 명령어가 제대로 실행이 안됩니다.)</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">chcp 65001</code></pre></figure>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-5.PNG" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<h2 id="jekyll-설치">jekyll 설치</h2>
+
+<p>인코딩 설정이 완료되면 jekyll를 설치하도록 하겠습니다.
+<br /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">gem install jekyll bundler</code></pre></figure>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-3.PNG" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p>jekyll의 설치가 잘 되었는지 확인해보도록 하겠습니다.
+<br /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">jekyll -v</code></pre></figure>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-4.PNG" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<h2 id="jekyll-실행하기">jekyll 실행하기</h2>
+
+<p>일단 prompt창에서 내 블로그파일의 경로까지 이동합니다.
+<br /></p>
+
+<h4 id="이동을-위한-간단한-명령어-정리">이동을 위한 간단한 명령어 정리</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">cd / 			    : c드라이브로 이동
+dir 			    : 현재 내가 위치한 디렉토리의 하위 폴더 목록을 볼 수 있음
+cd 하위폴더명      	 : 해당 폴더로 이동</code></pre></figure>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-4-1.PNG" alt="absolute" /></p>
+
+<p>위의 이미지는 제 PC에 블로그 파일이있는 경로입니다.</p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p>번들(플러그인)을 설치를 하도록하겠습니다.
+아래 명령어를 입력하면 설치가 시작됩니다.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">bundle install</code></pre></figure>
+
+<p><br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-10.PNG" alt="absolute" /></p>
+
+<p>만약 bundle install시 충돌이 날 경우에는 플러그인 전체 삭제 명령어를 실행한 후 다시 bundle install를 해주시면됩니다.</p>
+
+<p>설치된 플러그인 전체 삭제 명령어</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">gem uninstall -alx</code></pre></figure>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p>번들 설치가 완료되면 로컬에서 서버를 실행하도록 하겠습니다</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"> bundle exec jekyll serve</code></pre></figure>
+
+<p><br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-13.PNG" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p>ERROR가 뜹니다! ERROR가 뜨는 이유는 _config.yml에서 url과 baseurl에 git page 주소와 연결되어 있기 때문입니다.
+일단 작업을 중지시키고 ERROR를 잡도록 하겠습니다. 컨트롤키와 C를 함께 눌러주면 작업이 중지됩니다(ctrl-c)
+<br />
+ERROR를 잡기위해 _config.yml에서 url과 baseurl를 수정해줍니다.
+아래의 사진처럼 개발을 할때는 개발 usl과 baseurl의 주석을 풀어주고 배포용 url과 baserul을 주석처리해줍니다.
+(*git에 push를 할때는 반대로 배포용의 주석을 풀고 개발은 주석처리를 해주셔야합니다!)</p>
+
+<p><br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-14.PNG" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p>다시 bundle exec jekyll serve 명령어를 입력해주면 아까와는 다르게 ERROR가 안뜨는걸 볼 수 있습니다.
+아래 이미지의 빨간색 박스를 보면 접속주소를 알려줍니다.
+<br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/2-15.PNG" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p>http://127.0.0.1:4000/ 를 인터넷 주소창에 쳤을때 화면이 제대로 나오면 로컬 개발환경 셋팅은 끝난겁니다!</p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/jekyll">jekyll</a>,&nbsp;<a href="/tag/github Pages">github Pages</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=jekyll-3.+jekyll+%EB%A1%9C%EC%BB%AC+%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD+%EC%85%8B%ED%8C%85&url=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-3.html&via=TheBenCentra"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=jekyll-3.+jekyll+%EB%A1%9C%EC%BB%AC+%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD+%EC%85%8B%ED%8C%85&u=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-3.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-3.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+        <i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=jekyll-3.+jekyll+%EB%A1%9C%EC%BB%AC+%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD+%EC%85%8B%ED%8C%85&url=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-3.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=jekyll-3.+jekyll+%EB%A1%9C%EC%BB%AC+%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD+%EC%85%8B%ED%8C%85&url=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-3.html&media=http://localhost:4000/assets/instacode.png"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/kancho/2020/02/19/jekyll-3.html') + '&title=jekyll-3. jekyll 로컬 개발환경 셋팅'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Centrarium</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				<!-- 
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">posts</a>
+	
+
+	
+	<li class="nav-link"><a href="/typography/">Typography</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+ -->
+	<li class="nav-link"><a href="/about">About</a>
+	<li class="nav-link"><a href="/pie">Pie</a>
+	<li class="nav-link"><a href="/kancho">Kancho</a>
+	<li class="nav-link"><a href="/chickenPop">ChickenPop</a>
+	<li class="nav-link"><a href="/posts">All</a>
+	<li class="nav-link"><a href="/typography">Typography</a>
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:blcentra@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">blcentra@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">TheBenCentra</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/bencentra" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">bencentra</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">Ben Centra</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">A simple yet classy theme for your Jekyll website or blog.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

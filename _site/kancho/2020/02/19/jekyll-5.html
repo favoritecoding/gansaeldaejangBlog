@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+  <head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>jekyll-5. Post 올리기!</title>
+  <meta name="description" content="Post 파일 생성 및 작성법">
+  
+  <meta name="author" content="Ben Centra">
+  <meta name="copyright" content="&copy; Ben Centra 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Post 파일 생성 및 작성법" />
+  <meta property="og:url" content="http://localhost:4000/kancho/2020/02/19/jekyll-5.html">
+  <meta property="og:site_name" content="Centrarium" />
+  <meta property="og:title" content="jekyll-5. Post 올리기!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://localhost:4000/assets/instacode.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="jekyll-5. Post 올리기!">
+  <meta name="twitter:description" content="Post 파일 생성 및 작성법">
+  <meta name="twitter:image" content="http://localhost:4000/assets/instacode.png">
+  <meta name="twitter:url" content="http://localhost:4000/kancho/2020/02/19/jekyll-5.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/kancho/2020/02/19/jekyll-5.html">
+	<link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Centrarium">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				<!-- 
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">posts</a>
+	
+
+	
+	<li class="nav-link"><a href="/typography/">Typography</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+ -->
+	<li class="nav-link"><a href="/about">About</a>
+	<li class="nav-link"><a href="/pie">Pie</a>
+	<li class="nav-link"><a href="/kancho">Kancho</a>
+	<li class="nav-link"><a href="/chickenPop">ChickenPop</a>
+	<li class="nav-link"><a href="/posts">All</a>
+	<li class="nav-link"><a href="/typography">Typography</a>
+
+      </ul>  
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/instacode.png);">
+  <div class="scrim has-cover">
+    <header class="post-header">
+      <h1 class="title">jekyll-5. Post 올리기!</h1>
+      <p class="info">by <strong>kancho</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+  <div class="post-date">February 19, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/kancho">Kancho</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h2 id="post-파일-생성-및-작성법">Post 파일 생성 및 작성법</h2>
+
+<p>아래 이미지를 보고 설명을 드리겠습니다
+<br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/4-1.PNG" alt="absolute" /></p>
+
+<p>(1) md파일 생성<br />
+md 파일의 생성 위치는 _posts 폴더 밑입니다. 하위 폴더를 만드셔서 그 안에 만드셔도 상관없습니다.<br />
+만드는 방법은 만드시고 싶으신 폴더를 우클릭 한후 새파일을 선택하고 파일명을 작성해주시면 됩니다.<br />
+파일의 제목은 yyyy-mm-dd-파일이름.md 형식으로 생성하셔야 Jekyll이 블로그 포스트로 인식 할 수 있습니다</p>
+
+<p><br /></p>
+
+<p>(2) 확장자<br />
+확장자는 .md를 하셔도 되고 .markdown으로 하셔도 됩니다.</p>
+
+<p><br /></p>
+
+<p>파란색 박스 부분은 <a href="https://jekyllrb-ko.github.io/docs/frontmatter/">YAML 머리말</a> 부분입니다.<br />
+블로그 포스트 파일 첫 부분에는 꼭 필수적으로 작성해야 하는 부분입니다. 머리말이 있어야 Jekyll가 파일을 인식하여 처리 할 수 있습니다.<br />
+시작과 끝은 노란색 동그라미처럼 ‘—‘를 작성해야 합니다.</p>
+
+<p><br /></p>
+
+<p>(3) layout<br />
+사용하고 싶은 layout명을 적으시면 됩니다. layout은 _layouts에 있는 html 파일을 참조하여 화면을 그려줍니다.</p>
+
+<p><br /></p>
+
+<p>(4) title <br />
+포스트의 제목을 작성하는 부분입니다.(화면에 보이는 부분)</p>
+
+<p><br /></p>
+
+<p>(5) date <br />
+날짜를 작성하는 곳입니다. 작성시 주의해야 할 점은 현재 작성 시간이 아닌 24시간 전으로 작성해야 합니다.
+그래야 화면에 표시가 됩니다. 왜인지는 아직 모르겠습니다.</p>
+
+<p><br /></p>
+
+<p>(6) author<br />
+포스트 작성자를 의미합니다. 본인이 사용하는 이름이나 닉네임을 적으시면 됩니다.</p>
+
+<p><br /></p>
+
+<p>(7) categories<br />
+카테고리를 설정하는 부분입니다. 좋코팀은 메뉴를 카테고리를 이용하여 만들었기 때문에 글이 어떤 메뉴에서 보여져야 하는지 설정하는 부분입니다.</p>
+
+<p><br /></p>
+
+<p>(8) tags<br />
+태그를 설정하는 부분입니다. [] 괄호 안에 태그를 여러개 작성 할 수 있습니다. 태그를 구분할때는 ‘,’를 찍어주세요</p>
+
+<p><br /></p>
+
+<p>(9) cover<br />
+커버 이미지를 설정하는 곳입니다. 아래 사진처럼 블로그 타이틀의 배경사진을 설정하는 곳입니다.</p>
+
+<p><br /></p>
+
+<p><img data-action="zoom" src="/assets/kanchoImg/jekyll/4-2.PNG" alt="absolute" /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/jekyll">jekyll</a>,&nbsp;<a href="/tag/github Pages">github Pages</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=jekyll-5.+Post+%EC%98%AC%EB%A6%AC%EA%B8%B0%21&url=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-5.html&via=TheBenCentra"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=jekyll-5.+Post+%EC%98%AC%EB%A6%AC%EA%B8%B0%21&u=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-5.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-5.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+        <i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=jekyll-5.+Post+%EC%98%AC%EB%A6%AC%EA%B8%B0%21&url=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-5.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=jekyll-5.+Post+%EC%98%AC%EB%A6%AC%EA%B8%B0%21&url=http%3A%2F%2Flocalhost%3A4000%2Fkancho%2F2020%2F02%2F19%2Fjekyll-5.html&media=http://localhost:4000/assets/instacode.png"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/kancho/2020/02/19/jekyll-5.html') + '&title=jekyll-5. Post 올리기!'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Centrarium</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				<!-- 
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">posts</a>
+	
+
+	
+	<li class="nav-link"><a href="/typography/">Typography</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+ -->
+	<li class="nav-link"><a href="/about">About</a>
+	<li class="nav-link"><a href="/pie">Pie</a>
+	<li class="nav-link"><a href="/kancho">Kancho</a>
+	<li class="nav-link"><a href="/chickenPop">ChickenPop</a>
+	<li class="nav-link"><a href="/posts">All</a>
+	<li class="nav-link"><a href="/typography">Typography</a>
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:blcentra@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">blcentra@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">TheBenCentra</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/bencentra" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">bencentra</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">Ben Centra</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">A simple yet classy theme for your Jekyll website or blog.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

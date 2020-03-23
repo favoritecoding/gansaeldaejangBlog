@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Centrarium</title>
+    <description>A simple yet classy theme for your Jekyll website or blog.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 20 Feb 2020 17:34:47 +0900</pubDate>
+    <lastBuildDate>Thu, 20 Feb 2020 17:34:47 +0900</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[git] master 최신 커밋상태로 이동하기 (rebase 사용)</title>
+        <description>&lt;h2 id=&quot;내-dev브랜치를-master브랜치-최신-커밋상태에서-시작-하고-싶어&quot;&gt;내 dev브랜치를 master브랜치 최신 커밋상태에서 시작 하고 싶어!&lt;/h2&gt; &lt;p&gt;현재 브랜치의 상태는 master와 dev입니다. 지금까지는 dev에 git push를 하고 pull request를 하여 master에 반영했습니다. 그런데 kancho의 실수로 dev에 push해야할 코드를...</description>
+        <pubDate>Thu, 20 Feb 2020 00:00:52 +0900</pubDate>
+        <link>http://localhost:4000/kancho/2020/02/20/git-1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kancho/2020/02/20/git-1.html</guid>
+        
+        <category>git</category>
+        
+        
+        <category>kancho</category>
+        
+      </item>
+    
+      <item>
+        <title>jekyll-5. Post 올리기!</title>
+        <description>&lt;h2 id=&quot;post-파일-생성-및-작성법&quot;&gt;Post 파일 생성 및 작성법&lt;/h2&gt; &lt;p&gt;아래 이미지를 보고 설명을 드리겠습니다 &lt;br /&gt;&lt;/p&gt; &lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/kanchoImg/jekyll/4-1.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt; &lt;p&gt;(1) md파일 생성&lt;br /&gt; md 파일의 생성 위치는 _posts 폴더 밑입니다. 하위...</description>
+        <pubDate>Wed, 19 Feb 2020 23:00:52 +0900</pubDate>
+        <link>http://localhost:4000/kancho/2020/02/19/jekyll-5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kancho/2020/02/19/jekyll-5.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>github Pages</category>
+        
+        
+        <category>kancho</category>
+        
+      </item>
+    
+      <item>
+        <title>jekyll-4. jekyll 메뉴구성하기(category 이용)</title>
+        <description>&lt;h2 id=&quot;메뉴구성의-필요성&quot;&gt;메뉴구성의 필요성&lt;/h2&gt; &lt;p&gt;처음 좋코가 받은 테마의 메뉴는 about/posts/typography 3개뿐이였습니다. &lt;br /&gt; posts메뉴에 들어가면 카테고리로 분류한 글들이 한페이지에 다 표시가 되고 있는 상황입니다. &lt;br /&gt;&lt;/p&gt; &lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/kanchoImg/jekyll/3-1.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;...</description>
+        <pubDate>Wed, 19 Feb 2020 04:00:52 +0900</pubDate>
+        <link>http://localhost:4000/kancho/2020/02/19/jekyll-4.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kancho/2020/02/19/jekyll-4.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>github Pages</category>
+        
+        
+        <category>kancho</category>
+        
+      </item>
+    
+      <item>
+        <title>jekyll-3. jekyll 로컬 개발환경 셋팅</title>
+        <description>&lt;h2 id=&quot;jekyll-로컬-개발환경-셋팅의-필요성&quot;&gt;jekyll 로컬 개발환경 셋팅의 필요성&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;매번 수정된 코드를 확인 하기 위해 github에 git push를 하면 배포가 되기까지는 시간이 걸립니다. (빨리 반영될때도 있지만 그렇지 않은 경우도 있습니다.) 개인이 운영하는...</description>
+        <pubDate>Wed, 19 Feb 2020 03:00:52 +0900</pubDate>
+        <link>http://localhost:4000/kancho/2020/02/19/jekyll-3.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kancho/2020/02/19/jekyll-3.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>github Pages</category>
+        
+        
+        <category>kancho</category>
+        
+      </item>
+    
+      <item>
+        <title>jekyll-2. jekyll 테마 다운받아서 적용하기</title>
+        <description>&lt;h2 id=&quot;준비&quot;&gt;준비&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;생성된 github page (아직 안만드신 분은 &lt;a href=&quot;/kancho/2020/02/18/jekyll-1.html&quot;&gt;jekyll-1. github Pages 설정하기&lt;/a&gt;를 참고해주세요 )&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;jekyll-테마-다운로드&quot;&gt;jekyll 테마 다운로드&lt;/h2&gt; &lt;p&gt;github 검색창에 jekyll...</description>
+        <pubDate>Tue, 18 Feb 2020 03:00:52 +0900</pubDate>
+        <link>http://localhost:4000/kancho/2020/02/18/jekyll-2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kancho/2020/02/18/jekyll-2.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>github Pages</category>
+        
+        
+        <category>kancho</category>
+        
+      </item>
+    
+      <item>
+        <title>jekyll-1. github Pages 설정하기</title>
+        <description>&lt;h2 id=&quot;준비&quot;&gt;준비&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;github 계정(좋코팀은 프로젝트 관리를 위해 git 계정을 Organization으로 생성하였습니다)&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;repository-생성&quot;&gt;repository 생성&lt;/h2&gt; &lt;p&gt;Create a new repository 버튼을 클릭하여 레파지토리 생성...</description>
+        <pubDate>Tue, 18 Feb 2020 02:00:52 +0900</pubDate>
+        <link>http://localhost:4000/kancho/2020/02/18/jekyll-1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kancho/2020/02/18/jekyll-1.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>github Pages</category>
+        
+        
+        <category>kancho</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different...</description>
+        <pubDate>Mon, 20 Apr 2015 17:43:59 +0900</pubDate>
+        <link>http://localhost:4000/jekyll/2015/04/20/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2015/04/20/welcome-to-jekyll.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>welcome</category>
+        
+        
+        <category>Jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Dummy Post 6</title>
+        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</description>
+        <pubDate>Sun, 19 Apr 2015 04:25:52 +0900</pubDate>
+        <link>http://localhost:4000/pie/2015/04/19/dummy6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/pie/2015/04/19/dummy6.html</guid>
+        
+        <category>lorem</category>
+        
+        <category>ipsum</category>
+        
+        
+        <category>pie</category>
+        
+      </item>
+    
+      <item>
+        <title>Dummy Post 3</title>
+        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</description>
+        <pubDate>Sun, 19 Apr 2015 04:25:52 +0900</pubDate>
+        <link>http://localhost:4000/pie/2015/04/19/dummy3.html</link>
+        <guid isPermaLink="true">http://localhost:4000/pie/2015/04/19/dummy3.html</guid>
+        
+        
+        <category>pie</category>
+        
+      </item>
+    
+      <item>
+        <title>Dummy Post 5</title>
+        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</description>
+        <pubDate>Sun, 19 Apr 2015 04:25:52 +0900</pubDate>
+        <link>http://localhost:4000/chickenpop/2015/04/19/dummy5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/chickenpop/2015/04/19/dummy5.html</guid>
+        
+        <category>lorem</category>
+        
+        
+        <category>chickenPop</category>
+        
+      </item>
+    
+  </channel>
+</rss>
