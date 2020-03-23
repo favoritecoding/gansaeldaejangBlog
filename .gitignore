@@ -1,7 +1,5 @@
 .DS_Store
 
-# Compiled site
-.jekyll-cache/
 
 # Sass garbage
 #.sass-cache
