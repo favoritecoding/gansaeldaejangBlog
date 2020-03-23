@@ -21,9 +21,9 @@ layout: default
   <div class="post-categories">
   {% if page.categories.size > 0 %}in {% for cat in page.categories %}
     {% if site.jekyll-archives %}
-    <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+    <a href="/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
     {% else %}
-    <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+    <a href="/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
     {% endif %}
   {% endfor %}{% endif %}
   </div>
@@ -36,7 +36,7 @@ layout: default
 {% if site.jekyll-archives %}
 {% if page.tags.size > 0 %}
 <section class="tags">
-  <strong>Tags:</strong> {% for tag in page.tags %}<a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},&nbsp;{% endif %}{% endfor %}
+  <strong>Tags:</strong> {% for tag in page.tags %}<a href="/tag/{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},&nbsp;{% endif %}{% endfor %}
 </section>
 {% endif %}
 {% endif %}
@@ -95,7 +95,7 @@ layout: default
 	<section class="post-navigation">
 		<span class="prev-post">
 			{% if page.previous.url %}
-				<a href="{{page.previous.url | prepend: site.baseurl}}">
+				<a href="{{page.previous.url }}">
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
@@ -106,7 +106,7 @@ layout: default
 		</span>
 		<span class="next-post">
 			{% if page.next.url %}
-				<a href="{{page.next.url | prepend: site.baseurl}}">
+				<a href="{{page.next.url }}">
 					<span class="page-number">{{page.next.title}}</span>
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
